@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] Vector2 moveVector;
+
     private void Walk()
     {
         moveVector.x = Input.GetAxis("Horizontal");
