@@ -26,6 +26,13 @@ public class PlayerController : MonoBehaviour
     private GameObject effectLandingInstance;
     private void OnCollisionEnter2D(Collision2D coll)
     {
+        // сделал Влад тут короче касание с шипом по тэгу
+        if (coll.gameObject.CompareTag("Trap"))
+        {
+            Debug.Log("плэер помер");
+        }
+       // Сделал Влад
+
         if (coll.gameObject.CompareTag("Grounds"))
         {
             isGrounded = true;
