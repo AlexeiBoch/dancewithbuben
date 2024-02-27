@@ -4,7 +4,7 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController:Sounds
 {
     private Rigidbody2D rb;
     [SerializeField] private Animator anim;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private bool isGrounded = false;
     [SerializeField] private GameObject effectLanding;
-    private GameObject effectLandingInstance;
+    private GameObject effectLandingInstance;   
     private void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.CompareTag("Grounds"))
@@ -31,13 +31,16 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             anim.SetBool("onGround", isGrounded);
 
-                effectLandingInstance = Instantiate(effectLanding, transform.position - new Vector3(0, 0.9f, 0), Quaternion.identity);
-                Destroy(effectLandingInstance, 1f);
+            effectLandingInstance = Instantiate(effectLanding, transform.position - new Vector3(0, 0.9f, 0), Quaternion.identity);
+            PlaySound(sounds[3], voulume:0.1f , destroyed: true);
+            Destroy(effectLandingInstance, 1f);
         }
     }
 
     [SerializeField] private float speed;
     [SerializeField] Vector2 moveVector;
+
+    
 
     private void Walk()
     {
@@ -59,18 +62,18 @@ public class PlayerController : MonoBehaviour
         {
             if (isGrounded)
             {
-                // Если на земле, прыгаем обычным образом
+                PlaySound(sounds[0], destroyed: true, voulume:0.3f);
                 rb.AddForce(Vector2.up * jumpForce);
                 anim.SetBool("onGround", false);
                 isGrounded = false;
-                hasDoubleJumped = false; // Обнуляем флаг двойного прыжка
+                hasDoubleJumped = false;
             }
             else if (!hasDoubleJumped)
             {
-                // Если в воздухе и не использовали двойной прыжок
-                rb.velocity = new Vector2(rb.velocity.x, 0f); // Сбрасываем вертикальную скорость
+                PlaySound(sounds[1], destroyed: true, voulume: 0.3f);
+                rb.velocity = new Vector2(rb.velocity.x, 0f); 
                 rb.AddForce(Vector2.up * doubleJumpForce);
-                hasDoubleJumped = true; // Устанавливаем флаг двойного прыжка в true
+                hasDoubleJumped = true;
 
                 Vector3 spawnPosition = transform.position - new Vector3(0, 1.5f, 0);
                 effectJumpInstance = Instantiate(effectJump, spawnPosition, Quaternion.identity);
@@ -86,4 +89,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
             transform.localRotation = Quaternion.Euler(0, 180, 0);
     }
+
+    void ObxodSounds()
+    {
+        PlaySound(sounds[2], destroyed: true, voulume: 0.3f);
+        PlaySound(sounds[4], destroyed: true, voulume: 0.05f);
+    }   
 }
