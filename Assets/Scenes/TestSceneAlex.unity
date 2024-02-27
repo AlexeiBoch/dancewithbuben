@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
   Unlocked: 0
   anim: {fileID: 284861441}
   PlayerStatusChange: {fileID: 0}
@@ -432,6 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
   Unlocked: 1
   anim: {fileID: 793424634}
   PlayerStatusChange: {fileID: 0}
@@ -668,7 +670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1198094938}
-  - component: {fileID: 1198094937}
+  - component: {fileID: 1198094939}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -676,22 +678,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1198094937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198094936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32bbd156a2a0034eb8442afdca88936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerList:
-  - {fileID: 793424633}
-  - {fileID: 284861439}
-  - {fileID: 1801436948}
 --- !u!4 &1198094938
 Transform:
   m_ObjectHideFlags: 0
@@ -707,6 +693,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198094939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198094936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32bbd156a2a0034eb8442afdca88936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerList:
+  - {fileID: 793424633}
+  - {fileID: 284861439}
+  - {fileID: 1801436948}
 --- !u!1 &1801436948
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
   Unlocked: 0
   anim: {fileID: 1801436950}
   PlayerStatusChange: {fileID: 0}

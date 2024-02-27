@@ -29,12 +29,8 @@ public class PlayerController:Sounds
     private GameObject effectLandingInstance;   
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        // ������ ���� ��� ������ ������� � ����� �� ����
         if (coll.gameObject.CompareTag("Trap"))
-        {
-            Debug.Log("����� �����");
-        }
-       // ������ ����
+        { }
 
         if (coll.gameObject.CompareTag("Grounds"))
         {
@@ -48,9 +44,7 @@ public class PlayerController:Sounds
     }
 
     [SerializeField] private float speed;
-    [SerializeField] Vector2 moveVector;
-
-    
+    [SerializeField] Vector2 moveVector; 
 
     private void Walk()
     {
@@ -61,8 +55,8 @@ public class PlayerController:Sounds
 
     [SerializeField] private float jumpForce;
 
-    [SerializeField] private float doubleJumpForce; // ���� ��� �������� ������
-    private bool hasDoubleJumped = false; // ���� ��� ������������ ������������� �������� ������
+    [SerializeField] private float doubleJumpForce;
+    private bool hasDoubleJumped = false;
 
     [SerializeField] private GameObject effectJump;
     private GameObject effectJumpInstance;

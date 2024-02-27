@@ -11,12 +11,8 @@ public class Sounds: MonoBehaviour
     public void PlaySound(AudioClip clip, float voulume = 1f, bool destroyed = false)
     {
         if (destroyed)
-        {
             AudioSource.PlayClipAtPoint(clip, transform.position, voulume);            
-        }
         else
-        {
             audioScr.PlayOneShot(clip, voulume);
-        }
     }
 }
