@@ -1,0 +1,1236 @@
+fileFormatVersion: 2
+guid: 258562ec3b075ca49bf9284e23c95d2f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GUiAsset_0
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 2061
+        width: 1552
+        height: 709
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f338db34421e4cf4ca522ba924d5a51f
+      internalID: 1828126233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_7
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 2554
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2bfb91cee9b184b8bd2dca875fb4b2
+      internalID: -942873058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_8
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 2554
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19de31839a184d4692d3fb6799173c7
+      internalID: -1047539786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_9
+      rect:
+        serializedVersion: 2
+        x: 5745
+        y: 2554
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d62526301458db41ac1bf0a8c608d0f
+      internalID: 1666057690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_11
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 2148
+        width: 2363
+        height: 644
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92aeaad07e0a4f541a5288a7eedafd61
+      internalID: 1045622785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_12
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 2251
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cd2452c183c1244a14d2838de366f0
+      internalID: 670139178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_13
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 2245
+        width: 705
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0e0e895a544424882f42878f3db0dd
+      internalID: 510120332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_14
+      rect:
+        serializedVersion: 2
+        x: 5745
+        y: 2251
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d8f72a20335c742b2ef31f5da089fb
+      internalID: 1537442616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_16
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 1945
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8641cbff0fa714389266a30650ac68
+      internalID: 757786755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_17
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 1935
+        width: 705
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e2e9285db777e40a4b3cebcc2ff178
+      internalID: -2082649961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_18
+      rect:
+        serializedVersion: 2
+        x: 5745
+        y: 1945
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9203dbea1e8254b8bf1309c6d6ff26
+      internalID: -1427239594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_20
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 203
+        width: 2418
+        height: 1888
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120302300d1167a48a66b60e3be248a7
+      internalID: -1000737010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_21
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 1809
+        width: 299
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff22f3ec15938948bfe6058fac69800
+      internalID: 418348310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_22
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1610
+        width: 371
+        height: 373
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5635adc760c87f84699e207df4a745cd
+      internalID: 747491142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_23
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1610
+        width: 771
+        height: 417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0823a0032630dc408c6f9e230f4b257
+      internalID: 673004943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_24
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 1629
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccc2c94957646b4cb644078e5c95b24
+      internalID: 2078404015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_25
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 1616
+        width: 705
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30c3b4e259f9ec438465f974f503c92
+      internalID: 1291324723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_26
+      rect:
+        serializedVersion: 2
+        x: 5738
+        y: 1642
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411003789c10e8a49bdac50992f06b47
+      internalID: -52878279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_27
+      rect:
+        serializedVersion: 2
+        x: 5973
+        y: 1642
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9557d8b723df507458dd00ca8f6bfd6c
+      internalID: -434957426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_28
+      rect:
+        serializedVersion: 2
+        x: 6208
+        y: 1642
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35afa4dfa18e3dc458aad10138f49fe5
+      internalID: -2092683297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_29
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1613
+        width: 297
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4495d4d201abc342bc0c7df61d808e6
+      internalID: 1078457288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_30
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1239
+        width: 1515
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cde1b87a116c2148a2b5d85f31a06e2
+      internalID: 2094611353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_31
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 195
+        width: 1122
+        height: 1353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32070b4151babc54aaab96f24793c550
+      internalID: -1822963212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_32
+      rect:
+        serializedVersion: 2
+        x: 5408
+        y: 1326
+        width: 279
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66ec82e176da8f4a82cd842e5575c01
+      internalID: 1554732185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_33
+      rect:
+        serializedVersion: 2
+        x: 5625
+        y: 1329
+        width: 261
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b44076ae66cb3d429197399df6c3f2e
+      internalID: -440211452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_34
+      rect:
+        serializedVersion: 2
+        x: 5883
+        y: 1313
+        width: 277
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75b4807922ecd14c90d677bfc5f9a0f
+      internalID: 1796189660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_35
+      rect:
+        serializedVersion: 2
+        x: 6173
+        y: 1313
+        width: 277
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41d899896285484d9e8b69af09ed048
+      internalID: 357503417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_36
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1039
+        width: 1479
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6c8271289797048b60ac04e6a7df73
+      internalID: 1035724656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_37
+      rect:
+        serializedVersion: 2
+        x: 5384
+        y: 1013
+        width: 399
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7b718f27f9bdd4d94b20c3f7a30462
+      internalID: 245243222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_38
+      rect:
+        serializedVersion: 2
+        x: 5812
+        y: 1014
+        width: 219
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fc76e9b1b673f42b300c6a8645fcb7
+      internalID: 1804790956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_39
+      rect:
+        serializedVersion: 2
+        x: 6067
+        y: 1010
+        width: 396
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9310e8f3ae28a5746b6f7a51759b4151
+      internalID: 527823398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_40
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 707
+        width: 232
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee7a725abaf5964f92817fc1f507e35
+      internalID: -890317130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_41
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 707
+        width: 229
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f4ed2d479f56e449225d30cca5ae66
+      internalID: 906022648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_42
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 707
+        width: 229
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f80f9cef8629644ad3c312cf64f787
+      internalID: 1772210461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_43
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 711
+        width: 232
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b55e97c6d4f0dd459cebfac2a999607
+      internalID: -590997794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_44
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 624
+        width: 196
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6141857cef0d792468f6e527b7410823
+      internalID: -1405372715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_45
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 711
+        width: 242
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0582dc8fd05cf4886226505f4801a1
+      internalID: 6220568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_46
+      rect:
+        serializedVersion: 2
+        x: 5383
+        y: 537
+        width: 1077
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d32633f86a98c41b539a2ce4c7fd3c
+      internalID: 924307281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_47
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 446
+        width: 232
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce5aaad96cfe2c48bd1593d7d622896
+      internalID: 1973160975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_48
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 446
+        width: 229
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39acdd2bc8399ad4ebbcf0f2b57c9aef
+      internalID: -961180714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_49
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 446
+        width: 229
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1c00eb186bc5f408b325ad7f7ab29a
+      internalID: -2067524721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_50
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 443
+        width: 251
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7043ec7f18f134baebab4ce6c73f58
+      internalID: -195292111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_51
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 456
+        width: 158
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2767bab725a73bb459ec841c594245a4
+      internalID: -1030449572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_52
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 443
+        width: 251
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee379555ca1851498183c27add599eb
+      internalID: -1816057454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_53
+      rect:
+        serializedVersion: 2
+        x: 5390
+        y: 203
+        width: 1092
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ad673974962e14d868ebd684440537
+      internalID: -1467990050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_54
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 191
+        width: 233
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc5385567c26ea41858586d7dac29b9
+      internalID: 1073751568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_55
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 201
+        width: 229
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd853dfc1f9b0fb4bad43e822e2727c8
+      internalID: -409420475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_56
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 201
+        width: 229
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b14f3545e3e6264fbf51931b7bfda11
+      internalID: -1183975147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_57
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 195
+        width: 245
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c884fbe8cff2f4f488d9723684ed5056
+      internalID: -850526848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUiAsset_58
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 198
+        width: 196
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dc4b0d10039ef4691e45c3cc416b71
+      internalID: -1808991854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GUiAsset_0: 1828126233
+      GUiAsset_1: -1193943056
+      GUiAsset_10: 1632140675
+      GUiAsset_11: 1045622785
+      GUiAsset_12: 670139178
+      GUiAsset_13: 510120332
+      GUiAsset_14: 1537442616
+      GUiAsset_15: -989631922
+      GUiAsset_16: 757786755
+      GUiAsset_17: -2082649961
+      GUiAsset_18: -1427239594
+      GUiAsset_19: 1746283129
+      GUiAsset_2: -668762920
+      GUiAsset_20: -1000737010
+      GUiAsset_21: 418348310
+      GUiAsset_22: 747491142
+      GUiAsset_23: 673004943
+      GUiAsset_24: 2078404015
+      GUiAsset_25: 1291324723
+      GUiAsset_26: -52878279
+      GUiAsset_27: -434957426
+      GUiAsset_28: -2092683297
+      GUiAsset_29: 1078457288
+      GUiAsset_3: -1835951625
+      GUiAsset_30: 2094611353
+      GUiAsset_31: -1822963212
+      GUiAsset_32: 1554732185
+      GUiAsset_33: -440211452
+      GUiAsset_34: 1796189660
+      GUiAsset_35: 357503417
+      GUiAsset_36: 1035724656
+      GUiAsset_37: 245243222
+      GUiAsset_38: 1804790956
+      GUiAsset_39: 527823398
+      GUiAsset_4: 1780601939
+      GUiAsset_40: -890317130
+      GUiAsset_41: 906022648
+      GUiAsset_42: 1772210461
+      GUiAsset_43: -590997794
+      GUiAsset_44: -1405372715
+      GUiAsset_45: 6220568
+      GUiAsset_46: 924307281
+      GUiAsset_47: 1973160975
+      GUiAsset_48: -961180714
+      GUiAsset_49: -2067524721
+      GUiAsset_5: 649263721
+      GUiAsset_50: -195292111
+      GUiAsset_51: -1030449572
+      GUiAsset_52: -1816057454
+      GUiAsset_53: -1467990050
+      GUiAsset_54: 1073751568
+      GUiAsset_55: -409420475
+      GUiAsset_56: -1183975147
+      GUiAsset_57: -850526848
+      GUiAsset_58: -1808991854
+      GUiAsset_6: 101077342
+      GUiAsset_7: -942873058
+      GUiAsset_8: -1047539786
+      GUiAsset_9: 1666057690
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
