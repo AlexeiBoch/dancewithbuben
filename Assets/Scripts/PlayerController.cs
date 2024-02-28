@@ -4,24 +4,33 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerController:Sounds
+public class PlayerController : Sounds
 {
     public bool Unlocked;
     private Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] PlayerStatusChange PlayerStatusChange;
 
-    void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         Walk();
         Jump();
         Flip();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Ability();
+        }
+    }
+
+    protected virtual void Ability()
+    {
+        Debug.Log("Old");
     }
 
     [SerializeField] private bool isGrounded = false;
@@ -53,9 +62,9 @@ public class PlayerController:Sounds
         rb.velocity = new Vector2(moveVector.x * speed, rb.velocity.y);
     }
 
-    [SerializeField] private float jumpForce;
+    [SerializeField] protected float jumpForce;
 
-    [SerializeField] private float doubleJumpForce;
+    [SerializeField] protected float doubleJumpForce;
     private bool hasDoubleJumped = false;
 
     [SerializeField] private GameObject effectJump;
