@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1568394062944122403}
-  - component: {fileID: 6056302606167416570}
   - component: {fileID: 4789440738448369244}
   - component: {fileID: 7709879999013220560}
   - component: {fileID: 7600503368218771588}
@@ -37,34 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6056302606167416570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5901928132748638466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - {fileID: 8300000, guid: 0c3a070c0fe4b0741bbeb83684596afa, type: 3}
-  - {fileID: 8300000, guid: 285f7238de83f224b8f20dc1fdd2305d, type: 3}
-  - {fileID: 8300000, guid: 425414ea4a9f16a4db63c2c63b76fc3b, type: 3}
-  - {fileID: 8300000, guid: a7e4afd8c0eabc84390f5037c2de1d13, type: 3}
-  - {fileID: 8300000, guid: dff191e4a5246224fa67def1d2b4d0ee, type: 3}
-  Unlocked: 0
-  anim: {fileID: 7355566729725639822}
-  PlayerStatusChange: {fileID: 0}
-  isGrounded: 1
-  effectLanding: {fileID: 3276040251264374126, guid: 655568f5fa0428e49b3b230948b1b188, type: 3}
-  speed: 10
-  moveVector: {x: 0, y: 0}
-  jumpForce: 4000
-  doubleJumpForce: 3000
-  effectJump: {fileID: 3007312598124194547, guid: 6ede27209473140408fe50411460cc32, type: 3}
 --- !u!61 &4789440738448369244
 BoxCollider2D:
   m_ObjectHideFlags: 0

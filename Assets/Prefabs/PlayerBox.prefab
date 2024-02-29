@@ -15,14 +15,13 @@ GameObject:
   - component: {fileID: 3317208716312557867}
   - component: {fileID: 6393208177982537179}
   - component: {fileID: 8184412663538665996}
-  - component: {fileID: 7620255491001550400}
   m_Layer: 0
   m_Name: PlayerBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4020246939800344100
 Transform:
   m_ObjectHideFlags: 0
@@ -50,12 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d974f31c4c4ec4d88b3f9d9928498c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - {fileID: 8300000, guid: 0c3a070c0fe4b0741bbeb83684596afa, type: 3}
-  - {fileID: 8300000, guid: 285f7238de83f224b8f20dc1fdd2305d, type: 3}
-  - {fileID: 8300000, guid: 425414ea4a9f16a4db63c2c63b76fc3b, type: 3}
-  - {fileID: 8300000, guid: a7e4afd8c0eabc84390f5037c2de1d13, type: 3}
-  - {fileID: 8300000, guid: 5812b85ae86e99642a2b55c8201447d7, type: 3}
   Unlocked: 1
   anim: {fileID: 6393208177982537179}
   PlayerStatusChange: {fileID: 0}
@@ -66,6 +59,9 @@ MonoBehaviour:
   jumpForce: 4000
   doubleJumpForce: 3000
   effectJump: {fileID: 3007312598124194547, guid: 6ede27209473140408fe50411460cc32, type: 3}
+  box: {fileID: 325311656744791127, guid: e33a773a4902a96448015858c5b5d538, type: 3}
+  boxPreview: {fileID: 325311656744791127, guid: 7458a4561ad402546a9701eef5a1928d, type: 3}
+  spawnDistance: 2.5
 --- !u!61 &1443382670095533669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -307,31 +303,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7620255491001550400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5885122501226207704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - {fileID: 8300000, guid: 0c3a070c0fe4b0741bbeb83684596afa, type: 3}
-  - {fileID: 8300000, guid: 285f7238de83f224b8f20dc1fdd2305d, type: 3}
-  - {fileID: 8300000, guid: 425414ea4a9f16a4db63c2c63b76fc3b, type: 3}
-  - {fileID: 8300000, guid: a7e4afd8c0eabc84390f5037c2de1d13, type: 3}
-  - {fileID: 8300000, guid: dff191e4a5246224fa67def1d2b4d0ee, type: 3}
-  Unlocked: 1
-  anim: {fileID: 6393208177982537179}
-  PlayerStatusChange: {fileID: 0}
-  isGrounded: 1
-  effectLanding: {fileID: 3276040251264374126, guid: 655568f5fa0428e49b3b230948b1b188, type: 3}
-  speed: 10
-  moveVector: {x: 0, y: 0}
-  jumpForce: 4000
-  doubleJumpForce: 3000
-  effectJump: {fileID: 3007312598124194547, guid: 6ede27209473140408fe50411460cc32, type: 3}
