@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7282496203349771325}
   - component: {fileID: 8626731619412027271}
-  - component: {fileID: 8224689386780733374}
-  m_Layer: 0
+  - component: {fileID: -327483199023135800}
+  - component: {fileID: 890192667066289250}
+  m_Layer: 2
   m_Name: BoxPreview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8224689386780733374
+--- !u!61 &-327483199023135800
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 325311656744791127}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 53a039eefcda6324c99199f9dca2af95, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -114,7 +115,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &890192667066289250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325311656744791127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25bc8f74cc1df58419ca8cd2658d45c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

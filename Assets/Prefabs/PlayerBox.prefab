@@ -15,13 +15,13 @@ GameObject:
   - component: {fileID: 3317208716312557867}
   - component: {fileID: 6393208177982537179}
   - component: {fileID: 8184412663538665996}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlayerBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4020246939800344100
 Transform:
   m_ObjectHideFlags: 0
@@ -62,6 +62,7 @@ MonoBehaviour:
   box: {fileID: 325311656744791127, guid: e33a773a4902a96448015858c5b5d538, type: 3}
   boxPreview: {fileID: 325311656744791127, guid: 7458a4561ad402546a9701eef5a1928d, type: 3}
   spawnDistance: 2.5
+  spawnHeight: 0
 --- !u!61 &1443382670095533669
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010401785, y: -0.038692236}
+  m_Offset: {x: -0.0000001, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}

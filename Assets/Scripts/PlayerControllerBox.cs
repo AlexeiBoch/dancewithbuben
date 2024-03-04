@@ -1,45 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerControllerBox : PlayerController
 {
     [SerializeField] GameObject box;
     [SerializeField] GameObject boxPreview;
-    [SerializeField] float spawnDistance = 2.5f;
-    [SerializeField] float spawnHeight;
-    GameObject previousBox;
-    Vector3 previousSpawnPos;
+    [SerializeField] public float spawnDistance;
+    [SerializeField] public float spawnHeight;
+    private GameObject previousBox;
+    private GameObject previousBoxPreview;
 
     protected override void CheckAbilityKey()
     {
-        if (Input.GetKey(KeyCode.E))
-            Ability();
+        if (Input.GetKeyDown(KeyCode.E))
+            Ability("start");
         if (Input.GetKeyUp(KeyCode.E))
-            Ability(true);
+            Ability("place");
     }
 
-    protected void Ability(bool put = false)
+    protected void Ability(string action)
     {
         GameObject player = gameObject;
         Vector3 playerPos = player.transform.position;
         Vector3 playerDirection = player.transform.forward;
         Quaternion playerRotation = player.transform.rotation;
         Vector3 spawnPos = new Vector3(playerPos.x + spawnDistance * playerDirection.z, playerPos.y + spawnHeight, 0);
-        if (put)
+        float boxHalfOfSize = boxPreview.GetComponent<SpriteRenderer>().bounds.size.x / 2f + 0.0001f;
+        switch (action)
         {
-            Destroy(previousBox);
-            previousBox = Instantiate(box, spawnPos, playerRotation);
+            case "start":
+                {
+                    previousBoxPreview = Instantiate(boxPreview, spawnPos, playerRotation);
+                    previousBoxPreview.transform.parent = player.transform;
+                    break;
+                }
+            case "place":
+                {
+                    if (previousBox)
+                        Destroy(previousBox);
+                    Destroy(previousBoxPreview);
+                    if(BoxScript.canBuild)
+                        previousBox = Instantiate(box, previousBoxPreview.transform.position, playerRotation);
+                    break;
+                }
         }
-        else
-        {
-            if (previousSpawnPos != null && previousSpawnPos == spawnPos)
-                return;
-            if (previousBox != null)
-                Destroy(previousBox);
-            previousSpawnPos = spawnPos;
-            previousBox = Instantiate(boxPreview, spawnPos, playerRotation);
-        }
+        
     }
 }
