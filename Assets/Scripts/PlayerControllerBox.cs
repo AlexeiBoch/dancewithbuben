@@ -28,7 +28,6 @@ public class PlayerControllerBox : PlayerController
         Vector3 playerDirection = player.transform.forward;
         Quaternion playerRotation = player.transform.rotation;
         Vector3 spawnPos = new Vector3(playerPos.x + spawnDistance * playerDirection.z, playerPos.y + spawnHeight, 0);
-        float boxHalfOfSize = boxPreview.GetComponent<SpriteRenderer>().bounds.size.x / 2f + 0.0001f;
         switch (action)
         {
             case "start":
@@ -42,11 +41,10 @@ public class PlayerControllerBox : PlayerController
                     if (previousBox)
                         Destroy(previousBox);
                     Destroy(previousBoxPreview);
-                    if(BoxScript.canBuild)
+                    if (BoxScript.canBuild)
                         previousBox = Instantiate(box, previousBoxPreview.transform.position, playerRotation);
                     break;
                 }
         }
-        
     }
 }
