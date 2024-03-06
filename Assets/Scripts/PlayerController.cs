@@ -4,24 +4,38 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerController:Sounds
+public class PlayerController : MonoBehaviour
 {
     public bool Unlocked;
     private Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] PlayerStatusChange PlayerStatusChange;
 
-    void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         Walk();
         Jump();
         Flip();
+        CheckAbilityKey();
+    }
+
+    protected virtual void CheckAbilityKey()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Ability();
+        }
+    }
+    
+    protected virtual void Ability()
+    {
+        
     }
 
     [SerializeField] private bool isGrounded = false;
@@ -38,7 +52,7 @@ public class PlayerController:Sounds
             anim.SetBool("onGround", isGrounded);
 
             effectLandingInstance = Instantiate(effectLanding, transform.position - new Vector3(0, 0.9f, 0), Quaternion.identity);
-            PlaySound(sounds[3], voulume:0.1f , destroyed: true);
+           /* PlaySound(sounds[3], voulume:0.1f , destroyed: true);*/
             Destroy(effectLandingInstance, 1f);
         }
     }
@@ -53,9 +67,9 @@ public class PlayerController:Sounds
         rb.velocity = new Vector2(moveVector.x * speed, rb.velocity.y);
     }
 
-    [SerializeField] private float jumpForce;
+    [SerializeField] protected float jumpForce;
 
-    [SerializeField] private float doubleJumpForce;
+    [SerializeField] protected float doubleJumpForce;
     private bool hasDoubleJumped = false;
 
     [SerializeField] private GameObject effectJump;
@@ -66,7 +80,7 @@ public class PlayerController:Sounds
         {
             if (isGrounded)
             {
-                PlaySound(sounds[0], destroyed: true, voulume:0.3f);
+                /*PlaySound(sounds[0], destroyed: true, voulume:0.3f);*/
                 rb.AddForce(Vector2.up * jumpForce);
                 anim.SetBool("onGround", false);
                 isGrounded = false;
@@ -74,7 +88,7 @@ public class PlayerController:Sounds
             }
             else if (!hasDoubleJumped)
             {
-                PlaySound(sounds[1], destroyed: true, voulume: 0.3f);
+                //PlaySound(sounds[1], destroyed: true, voulume: 0.3f);
                 rb.velocity = new Vector2(rb.velocity.x, 0f); 
                 rb.AddForce(Vector2.up * doubleJumpForce);
                 hasDoubleJumped = true;
@@ -96,7 +110,7 @@ public class PlayerController:Sounds
 
     void ObxodSounds()
     {
-        PlaySound(sounds[2], destroyed: true, voulume: 0.3f);
-        PlaySound(sounds[4], destroyed: true, voulume: 0.05f);
+        //PlaySound(sounds[2], destroyed: true, voulume: 0.3f);
+        //PlaySound(sounds[4], destroyed: true, voulume: 0.05f);
     }   
 }

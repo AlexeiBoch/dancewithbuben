@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStatusChange : MonoBehaviour
@@ -23,7 +24,7 @@ public class PlayerStatusChange : MonoBehaviour
 
     void Start()
     {
-        selectedPlayer = playerList[0];
+        StatusStart();
     }
 
     void Update()
@@ -36,6 +37,13 @@ public class PlayerStatusChange : MonoBehaviour
             SelectedPlayer = playerList[2];
     }
 
+    void StatusStart()
+    {
+        foreach (GameObject player in playerList)
+            player.SetActive(false);
+        playerList[0].SetActive(true);
+        selectedPlayer = playerList[0];
+    }
     void ChangeStatus(GameObject newSelectedPlayer)
     {
         foreach(GameObject player in playerList) 
