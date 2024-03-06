@@ -7,9 +7,11 @@ using UnityEngine.Tilemaps;
 public class PlayerController : MonoBehaviour
 {
     public bool Unlocked;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] PlayerStatusChange PlayerStatusChange;
+    public Transform characterTransform;
+
 
     protected virtual void Start()
     {
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
     [SerializeField] Vector2 moveVector; 
 
     private void Walk()

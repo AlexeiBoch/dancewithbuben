@@ -6,47 +6,64 @@ using UnityEngine;
 
 public class PlayerControllerBox : PlayerController
 {
-    [SerializeField] GameObject box;
-    [SerializeField] GameObject boxPreview;
-    [SerializeField] public float spawnDistance;
-    [SerializeField] public float spawnHeight;
-    private GameObject previousBox;
-    private GameObject previousBoxPreview;
+    [SerializeField] GameObject effectSwiching;
+    private GameObject effectSwichingScene;
+    [SerializeField] bool proverkaNaDopusk = true;
+    [SerializeField] float scaleFactor = 0.5f;
+    [SerializeField] float raycastDistance = 1f;
+    public Vector3 defaultScale;
+    BoxCollider characterCollider;
+
+    protected override void Start()
+    {
+        base.Start();
+        characterTransform = transform;
+        defaultScale = characterTransform.localScale;
+        characterCollider = GetComponentInChildren<BoxCollider>(); // Получаем коллайдер персонажа
+    }
+
 
     protected override void CheckAbilityKey()
     {
         if (Input.GetKeyDown(KeyCode.E))
-            Ability("start");
-        if (Input.GetKeyUp(KeyCode.E))
-            Ability("place");
+        {
+            ScaleSwitch();
+            EffectSwitch();
+        }
+        DebugDrawRay();
     }
 
-    protected void Ability(string action)
+    private void EffectSwitch()
     {
-        GameObject player = gameObject;
-        Vector3 playerPos = player.transform.position;
-        Vector3 playerDirection = player.transform.forward;
-        Quaternion playerRotation = player.transform.rotation;
-        Vector3 spawnPos = new Vector3(playerPos.x + spawnDistance * playerDirection.z, playerPos.y + spawnHeight, 0);
-        float boxHalfOfSize = boxPreview.GetComponent<SpriteRenderer>().bounds.size.x / 2f + 0.0001f;
-        switch (action)
+        effectSwichingScene = Instantiate(effectSwiching, transform.position, Quaternion.identity);
+        Destroy(effectSwichingScene, 1f);
+    }
+
+    private void DebugDrawRay()
+    {
+        Vector3 rayOrigin = characterTransform.position + Vector3.up * characterCollider.bounds.extents.y;
+        Vector3 rayDirection = Vector3.up;
+        Debug.DrawRay(rayOrigin, rayDirection * raycastDistance, Color.green);
+    }
+
+    private void ScaleSwitch()
+    {
+        RaycastHit hit;
+        Vector3 rayOrigin = characterTransform.position + Vector3.up * characterCollider.bounds.extents.y;
+        Vector3 rayDirection = Vector3.up;
+
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, raycastDistance))
         {
-            case "start":
-                {
-                    previousBoxPreview = Instantiate(boxPreview, spawnPos, playerRotation);
-                    previousBoxPreview.transform.parent = player.transform;
-                    break;
-                }
-            case "place":
-                {
-                    if (previousBox)
-                        Destroy(previousBox);
-                    Destroy(previousBoxPreview);
-                    if(BoxScript.canBuild)
-                        previousBox = Instantiate(box, previousBoxPreview.transform.position, playerRotation);
-                    break;
-                }
+            proverkaNaDopusk = false;
+            return;
         }
-        
+
+        if (!proverkaNaDopusk)
+        {
+            if (characterTransform.localScale != defaultScale)
+                characterTransform.localScale = defaultScale;
+            else
+                characterTransform.localScale *= scaleFactor;
+        }
     }
 }

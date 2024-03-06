@@ -132,18 +132,18 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 284861440}
+  - component: {fileID: 284861446}
   - component: {fileID: 284861445}
   - component: {fileID: 284861444}
-  - component: {fileID: 284861443}
   - component: {fileID: 284861442}
   - component: {fileID: 284861441}
   m_Layer: 0
-  m_Name: Player1
+  m_Name: PlayerDecrease
   m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &284861440
 Transform:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 284861439}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.189692, y: -0.19000006, z: 0}
+  m_LocalPosition: {x: -0.78, y: -2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -232,28 +232,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &284861443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284861439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Unlocked: 0
-  anim: {fileID: 284861441}
-  PlayerStatusChange: {fileID: 0}
-  isGrounded: 1
-  effectLanding: {fileID: 7026729463131668048, guid: 2db4909676b92c64c889aff41d82b20c, type: 3}
-  speed: 10
-  moveVector: {x: 0, y: 0}
-  jumpForce: 4000
-  doubleJumpForce: 3000
-  effectJump: {fileID: 7026729463131668048, guid: 9a1c29b7cd8607f42b177422fdf24aaf, type: 3}
 --- !u!50 &284861444
 Rigidbody2D:
   serializedVersion: 4
@@ -313,7 +291,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010401785, y: -0.038692236}
+  m_Offset: {x: 0.010401785, y: -0.06670678}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -324,8 +302,35 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1456248, y: 2.029303}
+  m_Size: {x: 1.1456248, y: 1.973274}
   m_EdgeRadius: 0
+--- !u!114 &284861446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284861439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860bce9f50677fc46acd6164a16e9610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Unlocked: 0
+  rb: {fileID: 0}
+  anim: {fileID: 284861441}
+  PlayerStatusChange: {fileID: 0}
+  characterTransform: {fileID: 284861440}
+  isGrounded: 0
+  effectLanding: {fileID: 0}
+  speed: 10
+  moveVector: {x: 0, y: 0}
+  jumpForce: 4000
+  doubleJumpForce: 3000
+  effectJump: {fileID: 0}
+  effectSwiching: {fileID: 3007312598124194547, guid: 6ede27209473140408fe50411460cc32, type: 3}
+  scaleFactor: 0.5
+  defaultScale: {x: 0, y: 0, z: 0}
 --- !u!1001 &770810907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5885122501226207704, guid: 6a73c0a2f7684374a89ce06e2ec33679, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -566,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerList:
-  - {fileID: 1789893406}
+  - {fileID: 284861439}
 --- !u!1 &1736654903
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,11 +702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1789893406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5885122501226207704, guid: 6a73c0a2f7684374a89ce06e2ec33679, type: 3}
-  m_PrefabInstance: {fileID: 770810907}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801436948
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,8 +824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Unlocked: 0
+  rb: {fileID: 0}
   anim: {fileID: 1801436950}
   PlayerStatusChange: {fileID: 0}
+  characterTransform: {fileID: 0}
   isGrounded: 1
   effectLanding: {fileID: 7026729463131668048, guid: 2db4909676b92c64c889aff41d82b20c, type: 3}
   speed: 10
