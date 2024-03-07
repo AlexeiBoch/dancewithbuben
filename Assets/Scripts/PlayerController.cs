@@ -112,5 +112,5 @@ public class PlayerController : MonoBehaviour
     {
         //PlaySound(sounds[2], destroyed: true, voulume: 0.3f);
         //PlaySound(sounds[4], destroyed: true, voulume: 0.05f);
-    }   
+    }
 }
