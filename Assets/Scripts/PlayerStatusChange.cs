@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerStatusChange : MonoBehaviour
 {
     [SerializeField] List<GameObject> playerList = new List<GameObject>();
+    [SerializeField] List<string> ignoreDeleteTags;
 
     private GameObject selectedPlayer;
     public GameObject SelectedPlayer
@@ -40,8 +41,8 @@ public class PlayerStatusChange : MonoBehaviour
     void StatusStart()
     {
         foreach (GameObject player in playerList)
-            player.SetActive(false);
-        playerList[0].SetActive(true);
+            SetActiveExtended(player, false);
+        SetActiveExtended(playerList[0], true);
         selectedPlayer = playerList[0];
     }
     void ChangeStatus(GameObject newSelectedPlayer)
@@ -53,9 +54,17 @@ public class PlayerStatusChange : MonoBehaviour
                 GameObject previousPlayer = selectedPlayer;
                 player.transform.position = previousPlayer.transform.position;
                 player.transform.rotation = previousPlayer.transform.localRotation;
-                player.SetActive(true);
+                SetActiveExtended(player, true);
             }
-            else player.SetActive(false);
+            else SetActiveExtended(player, false);
         }
+    }
+    public void SetActiveExtended(GameObject player, bool value)
+    {
+        if (!value)
+            foreach (Transform child in player.transform)
+                if (!ignoreDeleteTags.Contains(child.gameObject.tag))
+                    Destroy(child.gameObject);
+        player.SetActive(value);
     }
 }
