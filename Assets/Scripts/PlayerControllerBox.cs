@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Xml.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class PlayerControllerBox : PlayerController
         base.Start();
         characterTransform = transform;
         defaultScale = characterTransform.localScale;
-        characterCollider = GetComponentInChildren<BoxCollider>(); // Получаем коллайдер персонажа
+        characterCollider = GetComponentInChildren<BoxCollider>(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     }
 
 
