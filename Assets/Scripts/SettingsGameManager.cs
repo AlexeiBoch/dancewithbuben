@@ -8,10 +8,16 @@ public class SettingsGameManager : MonoBehaviour
 {
     [SerializeField] GameObject PanelMenu;
     [SerializeField] GameObject settings;
+    [SerializeField] GameObject PausePanel;
+    [SerializeField] GameObject PapersScroll;
 
     public void OpenPanel()
     {
-        PanelMenu.SetActive(!PanelMenu.activeSelf);
+        if (!(PausePanel.activeSelf)&& !(PapersScroll.activeSelf))
+        {
+            PanelMenu.SetActive(!PanelMenu.activeSelf);
+        }
+       
     }
 
     public void OpenSettings()
