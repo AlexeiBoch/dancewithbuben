@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5185225453535684059, guid: ea190a46449f11043b4d6dc2b84799a4, type: 3}
       propertyPath: Unlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5185225453535684059, guid: ea190a46449f11043b4d6dc2b84799a4, type: 3}
       propertyPath: jumpForce
@@ -629,6 +629,7 @@ MonoBehaviour:
   playerList:
   - {fileID: 1789893406}
   - {fileID: 741799687}
+  ignoreDeleteTags: []
 --- !u!1 &1736654903
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,8 +754,8 @@ Transform:
   m_GameObject: {fileID: 1736654903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.4, y: -0.9366, z: 0}
-  m_LocalScale: {x: 1.9164456, y: 7.8868, z: 1}
+  m_LocalPosition: {x: -8.7385, y: -0.9366, z: 0}
+  m_LocalScale: {x: 0.5935232, y: 7.8868, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

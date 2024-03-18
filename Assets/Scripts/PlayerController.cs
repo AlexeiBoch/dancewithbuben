@@ -6,7 +6,6 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool Unlocked;
     public Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] PlayerStatusChange PlayerStatusChange;

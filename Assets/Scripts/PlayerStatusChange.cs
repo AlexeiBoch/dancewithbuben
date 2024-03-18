@@ -30,11 +30,11 @@ public class PlayerStatusChange : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && playerList[0].GetComponent<PlayerController>().Unlocked)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
             SelectedPlayer = playerList[0];
-        if (Input.GetKeyDown(KeyCode.Alpha2) && playerList[1].GetComponent<PlayerController>().Unlocked)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && SaveProgress.data["PlayerReductionUnlocked"] == 1)
             SelectedPlayer = playerList[1];
-        if (Input.GetKeyDown(KeyCode.Alpha3) && playerList[2].GetComponent<PlayerController>().Unlocked)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && SaveProgress.data
             SelectedPlayer = playerList[2];
     }
 
@@ -66,5 +66,10 @@ public class PlayerStatusChange : MonoBehaviour
                 if (!ignoreDeleteTags.Contains(child.gameObject.tag))
                     Destroy(child.gameObject);
         player.SetActive(value);
+    }
+
+    public void UnlockPlayer(int playerId)
+    {
+        Player
     }
 }
