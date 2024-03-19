@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class OpenScroll : MonoBehaviour
 {
-    [SerializeField] GameObject PapersScroll;
+    
     private bool playerInCollider = false;
     [SerializeField] GameObject ScrollText;
     [SerializeField] GameObject Scroll;
-    [SerializeField] GameObject PanelScroll;
+    [SerializeField] GameObject PanelScrollBack;
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
+        
         if (coll.CompareTag("Player"))
         {
             playerInCollider = true;
+           
         }
     }
 
@@ -23,6 +25,7 @@ public class OpenScroll : MonoBehaviour
         if (coll.CompareTag("Player"))
         {
             playerInCollider = false;
+           
         }
     }
 
@@ -31,23 +34,22 @@ public class OpenScroll : MonoBehaviour
         if (playerInCollider && Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("записка работает");
-            PapersScroll.SetActive(true);
             ScrollText.SetActive(false);
             Scroll.SetActive(false);
-            PanelScroll.SetActive(true);
+            PanelScrollBack.SetActive(true);
             Time.timeScale = 0f;
            
 
         }
     }
 
-    public void CLosePapersScroll()
+    public void CLosePanelScroll()
     {
-        PapersScroll.SetActive(false);
-        Time.timeScale = 1f;
+        
         Scroll.SetActive(true);
         ScrollText.SetActive(true);
-        PanelScroll.SetActive(false);
+        PanelScrollBack.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
 
