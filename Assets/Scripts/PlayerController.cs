@@ -6,10 +6,8 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool Unlocked;
     public Rigidbody2D rb;
     [SerializeField] private Animator anim;
-    [SerializeField] PlayerStatusChange PlayerStatusChange;
     public Transform characterTransform;
 
 
@@ -47,8 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Trap"))
         { }
-
-        if (coll.gameObject.CompareTag("Grounds"))
+        if (coll.gameObject.CompareTag("Grounds") || coll.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
             anim.SetBool("onGround", isGrounded);
