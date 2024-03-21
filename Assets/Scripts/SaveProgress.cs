@@ -5,33 +5,37 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System;
 using System.Collections.Generic;
+using UnityEditor;
+using Unity.VisualScripting;
 
 //this is SaveInfoNewer.cs
 //this script saves and loads all the info we want
-public class SaveProgress : MonoBehaviour
+public static class SaveProgress
 {
     //data is what is finally saved
-    public static Dictionary<string, int> data;
+    public static Dictionary<string, int> data = new Dictionary<string, int>();
+    private static string path = "PlayerProgress.save";
 
-    void Awake()
-    {
-        //LoadUpgradeData();
-        LoadData();
-        //WARNING! data.Clear() deletes EVERYTHING
-        //data.Clear();
-        //SaveData();
-    }
-
-    public void LoadData()
+    public static void LoadData()
     {
         //this loads the data
-        data = DeserializeData<Dictionary<string, int>>("PlayerProgress.save");
+        data = DeserializeData<Dictionary<string, int>>(path);
     }
 
-    public void SaveData()
+    [MenuItem("Tools/SaveManager/Save data to file")]
+    public static void SaveData()
     {
         //this saves the data
-        SerializeData(data, "PlayerProgress.save");
+        SerializeData(data, path);
+    }
+
+    [MenuItem("Tools/SaveManager/Delete PlayerProgress.save")]
+    public static void DeleteSaveFile()
+    {
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
     }
     public static void SerializeData<T>(T data, string path)
     {
