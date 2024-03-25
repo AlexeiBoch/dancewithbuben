@@ -8,6 +8,7 @@ TagManager:
   - Grounds
   - Trap
   - PlayerProjectile
+  - Box
   - Zone1
   - Zone2
   layers:

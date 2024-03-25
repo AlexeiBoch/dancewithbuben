@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,5 +42,10 @@ public class GameControler : MonoBehaviour
     void Respawn()
     {
         transform.position = checpointPos;
+    }
+
+    public static implicit operator GameControler(Collider2D v)
+    {
+        throw new NotImplementedException();
     }
 }

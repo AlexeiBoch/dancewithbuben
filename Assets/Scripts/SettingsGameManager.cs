@@ -6,33 +6,42 @@ using UnityEngine.SceneManagement;
 
 public class SettingsGameManager : MonoBehaviour
 {
-    [SerializeField] GameObject PanelMenu;
-    [SerializeField] GameObject settings;
+    [SerializeField] GameObject PanelMenuBack;
+    [SerializeField] GameObject PanelSettingsBack;
+    [SerializeField] GameObject PausePanelBack;
+    [SerializeField] GameObject PanelScrollBack;
 
     public void OpenPanel()
     {
-        PanelMenu.SetActive(!PanelMenu.activeSelf);
+        if (!(PausePanelBack.activeSelf)&& !(PanelScrollBack.activeSelf))
+        {
+            PanelMenuBack.SetActive(!PanelMenuBack.activeSelf);
+        }
+        Time.timeScale = 0f;
+
     }
 
     public void OpenSettings()
     {
-        PanelMenu.SetActive(false);
-        settings.SetActive(!settings.activeSelf);
+        PanelMenuBack.SetActive(false);
+        PanelSettingsBack.SetActive(!PanelSettingsBack.activeSelf);
     }
 
     public void PlayGame()
     {
-        PanelMenu.SetActive(false);
+        PanelMenuBack.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void ClosePanel()
     {
-        PanelMenu.SetActive(false);
+        PanelMenuBack.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void CloseSattings()
     {
-        PanelMenu.SetActive(true);
-        settings.SetActive (false);
+        PanelMenuBack.SetActive(true);
+        PanelSettingsBack.SetActive (false);
     }
     public void ExitToStartGame()
     {

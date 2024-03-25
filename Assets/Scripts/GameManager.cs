@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerStatusChange : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> playerList = new List<GameObject>();
     [SerializeField] List<string> ignoreDeleteTags;
@@ -26,15 +30,30 @@ public class PlayerStatusChange : MonoBehaviour
     void Start()
     {
         StatusStart();
+        SaveStart();
     }
 
+    static void SaveStart()
+    {
+        string savePath = "PlayerProgress.save";
+        if (File.Exists(savePath))
+        {
+            SaveProgress.LoadData();
+        }
+        else
+        {
+            SaveProgress.data["PlayerReductionUnlocked"] = 0;
+            SaveProgress.data["PlayerWizardUnlocked"] = 0;
+            SaveProgress.SaveData();
+        }
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && playerList[0].GetComponent<PlayerController>().Unlocked)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
             SelectedPlayer = playerList[0];
-        if (Input.GetKeyDown(KeyCode.Alpha2) && playerList[1].GetComponent<PlayerController>().Unlocked)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && SaveProgress.data["PlayerReductionUnlocked"] == 1)
             SelectedPlayer = playerList[1];
-        if (Input.GetKeyDown(KeyCode.Alpha3) && playerList[2].GetComponent<PlayerController>().Unlocked)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && SaveProgress.data["PlayerWizardUnlocked"] == 1)
             SelectedPlayer = playerList[2];
     }
 
@@ -66,5 +85,27 @@ public class PlayerStatusChange : MonoBehaviour
                 if (!ignoreDeleteTags.Contains(child.gameObject.tag))
                     Destroy(child.gameObject);
         player.SetActive(value);
+    }
+
+    public void UnlockPlayer(int playerId)
+    {
+        switch (playerId)
+        {
+            case 1:
+                {
+                    SaveProgress.data["PlayerReductionUnlocked"] = 1;
+                    return;
+                }
+            case 2:
+                {
+                    SaveProgress.data["PlayerWizardUnlocked"] = 1;
+                    return;
+                }
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveProgress.SaveData();
     }
 }

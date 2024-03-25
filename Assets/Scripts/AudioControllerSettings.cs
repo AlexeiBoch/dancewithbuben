@@ -7,18 +7,18 @@ public class AudioControllerSettings: MonoBehaviour
 {
     [SerializeField] Sprite audioOn;
     [SerializeField] Sprite audioOff;
-    [SerializeField] GameObject buttonAudio;
+    //[SerializeField] GameObject buttonAudio;
 
     [SerializeField] Slider slider;
 
     
-    [SerializeField] AudioSource audioSource;
+   // [SerializeField] AudioSource audioSource;
 
-    [SerializeField] AudioClip clip;
+   // [SerializeField] AudioClip clip;
 
     private void Update()
     {
-        audioSource.volume = slider.value;
+       // audioSource.volume = slider.value;
     }
 
     public void OnOffAudio()
@@ -26,16 +26,16 @@ public class AudioControllerSettings: MonoBehaviour
         if (AudioListener.volume == 1)
         {
             AudioListener.volume = 0;
-            buttonAudio.GetComponent<Image>().sprite = audioOff;
+           // buttonAudio.GetComponent<Image>().sprite = audioOff;
         }
         else
         {
             AudioListener.volume = 1;
-            buttonAudio.GetComponent<Image>().sprite = audioOn;
+          //  buttonAudio.GetComponent<Image>().sprite = audioOn;
         }
     }
     public void PlaySound()
     {
-        audioSource.PlayOneShot(clip);
+        //audioSource.PlayOneShot(clip);
     }
 }
