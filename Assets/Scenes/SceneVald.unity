@@ -2110,11 +2110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Unlocked: 0
   rb: {fileID: 0}
   anim: {fileID: 737502065}
-  PlayerStatusChange: {fileID: 0}
   characterTransform: {fileID: 0}
+  money: 1
   isGrounded: 1
   effectLanding: {fileID: 3276040251264374126, guid: 655568f5fa0428e49b3b230948b1b188, type: 3}
   speed: 10
@@ -3668,6 +3667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102587ffec80825418b7c15441f6a1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 28c7ca015e06a3641a9f12cff9c23385, type: 3}
   ScrollText: {fileID: 1203472887}
   Scroll: {fileID: 1290831697}
   PanelScrollBack: {fileID: 502372102}
