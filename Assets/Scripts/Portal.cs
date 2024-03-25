@@ -39,7 +39,7 @@ public class Portal : Sounds
         else
         {
             tpActive = true;
-            PlaySound(sounds[1], destroyed: true, voulume: 0.4f);
+            PlaySound(sounds[0], destroyed: true, voulume: 0.4f);
         }
     }
 
