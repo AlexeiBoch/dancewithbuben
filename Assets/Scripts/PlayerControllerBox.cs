@@ -43,7 +43,7 @@ public class PlayerControllerBox : PlayerController
                     if (previousBox)
                         Destroy(previousBox);
                     Destroy(previousBoxPreview);
-                    if(BoxScript.canBuild)
+                    //if(BoxScript.canBuild)
                         previousBox = Instantiate(box, previousBoxPreview.transform.position, playerRotation);
                     break;
                 }

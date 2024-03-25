@@ -8,6 +8,8 @@ TagManager:
   - Grounds
   - Trap
   - PlayerProjectile
+  - Zone1
+  - Zone2
   layers:
   - Default
   - TransparentFX

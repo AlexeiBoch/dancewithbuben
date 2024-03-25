@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] PlayerStatusChange PlayerStatusChange;
     public Transform characterTransform;
 
+    public int money = 1;
+
 
     protected virtual void Start()
     {
