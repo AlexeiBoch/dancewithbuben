@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenScroll : MonoBehaviour
+public class OpenScroll : Sounds
 {
     
     private bool playerInCollider = false;
@@ -38,8 +38,7 @@ public class OpenScroll : MonoBehaviour
             Scroll.SetActive(false);
             PanelScrollBack.SetActive(true);
             Time.timeScale = 0f;
-           
-
+            PlaySound(sounds[0], destroyed: true, voulume: 0.7f);
         }
     }
 
