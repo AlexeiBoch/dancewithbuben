@@ -9,15 +9,16 @@ public class GameControler : MonoBehaviour
     Vector2 checpointPos;
     [SerializeField] GameObject PausePanel;
     
+    
 
     private void Start()
     {
         checpointPos = transform.position;
     }
 
-    private void OnTriggerEnter2D(Collider2D coll)
+    private void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if (coll.CompareTag("Trap"))
+        if (otherCollider.CompareTag("Trap"))
         {
             Die();
         }
