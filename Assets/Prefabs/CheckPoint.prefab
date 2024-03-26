@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7598502728188605855}
   - component: {fileID: 7040904608062808506}
   - component: {fileID: 4544450165533983593}
-  - component: {fileID: 5435937300116332425}
+  - component: {fileID: 5852701626825404206}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.144095, y: 8.426451}
   m_EdgeRadius: 0
---- !u!114 &5435937300116332425
+--- !u!114 &5852701626825404206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,3 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6776df0fcb0a0541ae31626085713a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touchEffect: {fileID: 8029691974023480222, guid: 4d65cb47e3db0144eade4a79066cd29a, type: 3}
