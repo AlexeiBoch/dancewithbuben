@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         {
             if (waitTime <= 0)
             {
+
                 randomSports = Random.Range(0, moveSports.Length);
                 waitTime = startWaitTime;
             }
