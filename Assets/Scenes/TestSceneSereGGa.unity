@@ -2600,8 +2600,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1348154858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 19.15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -9133,6 +9133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 8300000, guid: 28c7ca015e06a3641a9f12cff9c23385, type: 3}
+  sliderVolumeMusic: {fileID: 0}
+  volumeMusic: {fileID: 0}
+  voulume1: 0
   ScrollText: {fileID: 251951431}
   Scroll: {fileID: 531686605}
   PanelScrollBack: {fileID: 404846759}
@@ -9230,7 +9233,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!213 &549471787
@@ -9640,8 +9643,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1838938681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 19.15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10631,7 +10634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &641150046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17347,6 +17350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89b49a25776c748904020d6a881fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
+  sliderVolumeMusic: {fileID: 0}
+  volumeMusic: {fileID: 0}
+  voulume1: 0
   rb: {fileID: 0}
   anim: {fileID: 1009382352}
   characterTransform: {fileID: 0}
@@ -19110,8 +19117,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 90958284}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 19.15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -21239,6 +21246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 8300000, guid: 28c7ca015e06a3641a9f12cff9c23385, type: 3}
+  sliderVolumeMusic: {fileID: 0}
+  volumeMusic: {fileID: 0}
+  voulume1: 0
   ScrollText: {fileID: 2140124858}
   Scroll: {fileID: 1234691564}
   PanelScrollBack: {fileID: 404846759}
@@ -21336,7 +21346,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!213 &1235971011
@@ -68171,7 +68181,7 @@ RectTransform:
   m_Father: {fileID: 1371625261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -70131,6 +70141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 8300000, guid: 28c7ca015e06a3641a9f12cff9c23385, type: 3}
+  sliderVolumeMusic: {fileID: 0}
+  volumeMusic: {fileID: 0}
+  voulume1: 0
   ScrollText: {fileID: 1099887632}
   Scroll: {fileID: 1844209323}
   PanelScrollBack: {fileID: 404846759}
@@ -70228,7 +70241,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1846048432
@@ -71734,7 +71747,7 @@ RectTransform:
   m_Father: {fileID: 1645363766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -74939,7 +74952,7 @@ RectTransform:
   m_Father: {fileID: 2051538141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
