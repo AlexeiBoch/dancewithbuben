@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class CheckPoint:MonoBehaviour
 {
-    GameControler gameControler;
+    PlayerController playerController;
     public GameObject touchEffect;
     GameObject bufferEffect;
 
-    private void Awake()
+    private void Start()
     {
-        gameControler = GameObject.FindGameObjectWithTag("Player").GetComponent<GameControler>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.CompareTag("Player"))
         {
-            gameControler.UpdateCheckPoint(transform.position);
+            playerController.UpdateCheckPoint(transform.position);
 
             Vector3 spawnPosition = transform.position - new Vector3(0, 0, 0);
             bufferEffect = Instantiate(touchEffect, spawnPosition, Quaternion.identity);

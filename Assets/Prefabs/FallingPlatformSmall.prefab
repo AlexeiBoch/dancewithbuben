@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1492277110826126255}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Grounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FallingPlatformTime: 0.2
-  BackPlatformTime: 3
-  fallingSpeed: 40
+  BackPlatformTime: 1.5
+  fallingSpeed: 43
 --- !u!1 &8791896053820979938
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0757006, y: -0.3664751, z: -0.036390424}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 4.168925}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5366315974706087303}

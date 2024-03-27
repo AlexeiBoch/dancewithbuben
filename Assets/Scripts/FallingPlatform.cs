@@ -20,10 +20,9 @@ public class FallingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("Player") && moveIngBack == false)
+        if (collision.gameObject.CompareTag("Player") && moveIngBack == false)
         {
             Invoke("FallPlatform", FallingPlatformTime);
-            
         }
     }
 

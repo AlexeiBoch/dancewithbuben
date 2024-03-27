@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
-public class SettingsGameManager : MonoBehaviour
+public class  SettingsGameManager : MonoBehaviour
 {
     [SerializeField] GameObject PanelMenuBack;
     [SerializeField] GameObject PanelSettingsBack;
@@ -36,6 +36,7 @@ public class SettingsGameManager : MonoBehaviour
     {
         PanelMenuBack.SetActive(false);
         Time.timeScale = 1f;
+       
     }
 
     public void CloseSattings()

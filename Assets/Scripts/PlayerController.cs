@@ -4,19 +4,54 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerController : Sounds
+public class PlayerController:Sounds
 {
     public Rigidbody2D rb;
     [SerializeField] private Animator anim;
     public Transform characterTransform;
 
     public int money = 1;
+    static Vector2 checpointPos;
+    [SerializeField] GameObject PausePanel;
 
+    //перенос GameController
+    private void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        if (otherCollider.CompareTag("Trap"))
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        PausePanel.SetActive(!PausePanel.activeSelf);
+        Time.timeScale = 0f;
+
+    }
+    public void ClosePanelPause()
+    {
+        PausePanel.SetActive(false);
+        Respawn();
+        Time.timeScale = 1f;
+        
+    }
+
+    public  void UpdateCheckPoint(Vector2 pos)
+    {
+        checpointPos = pos;
+    }
+    public void Respawn()
+    {
+        transform.position = checpointPos;
+    }
+    //перенос GameController
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        checpointPos = transform.position;
+        
     }
 
     protected virtual void Update()

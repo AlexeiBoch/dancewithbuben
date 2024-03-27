@@ -11,6 +11,7 @@ TagManager:
   - Zone1
   - Zone2
   - Enemy
+  - Light
   layers:
   - Default
   - TransparentFX
