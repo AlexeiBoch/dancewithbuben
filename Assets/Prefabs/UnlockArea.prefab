@@ -90,4 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959cf2237d3108b49bbc2f4928ee12a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  option: 
+  option: reduction
+  TextUnLockAbility: {fileID: 0}
