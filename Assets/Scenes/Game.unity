@@ -755,7 +755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &449621703
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1097,8 +1097,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcd0f9df57e2664c8df5425d09b2e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelMenu: {fileID: 1003319433}
-  settings: {fileID: 1507108750}
+  PanelMenuBack: {fileID: 0}
+  PanelSettingsBack: {fileID: 0}
+  PausePanelBack: {fileID: 0}
+  PanelScrollBack: {fileID: 0}
 --- !u!4 &752105402
 Transform:
   m_ObjectHideFlags: 0
@@ -1128,11 +1130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioOn: {fileID: 21300000, guid: f409f161b68fcdb47816af9e522add02, type: 3}
   audioOff: {fileID: 21300000, guid: 10cd7ade24b9bb348a59db20fc028807, type: 3}
-  buttonAudio: {fileID: 0}
-  slider: {fileID: 1291356822}
-  audioSource: {fileID: 752105404}
-  clip:
-  - {fileID: 8300000, guid: 8ff03e4481002fd44af45b40237ed54d, type: 3}
+  sliders: []
+  clips: []
 --- !u!82 &752105404
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2057,7 +2056,7 @@ RectTransform:
   m_Father: {fileID: 201342429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2215,8 +2214,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 567262394}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 19.15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

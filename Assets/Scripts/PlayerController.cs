@@ -4,7 +4,7 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Sounds
 {
     public Rigidbody2D rb;
     [SerializeField] private Animator anim;
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("onGround", isGrounded);
 
             effectLandingInstance = Instantiate(effectLanding, transform.position - new Vector3(0, 0.9f, 0), Quaternion.identity);
-           /* PlaySound(sounds[3], voulume:0.1f , destroyed: true);*/
+            PlaySound(sounds[3], voulume: voulume1, destroyed: true);
             Destroy(effectLandingInstance, 1f);
         }
     }
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             if (isGrounded)
             {
-                /*PlaySound(sounds[0], destroyed: true, voulume:0.3f);*/
+                PlaySound(sounds[0], destroyed: true, voulume: voulume1);
                 rb.AddForce(Vector2.up * jumpForce);
                 anim.SetBool("onGround", false);
                 isGrounded = false;
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (!hasDoubleJumped)
             {
-                //PlaySound(sounds[1], destroyed: true, voulume: 0.3f);
+                PlaySound(sounds[1], destroyed: true, voulume : voulume1);
                 rb.velocity = new Vector2(rb.velocity.x, 0f); 
                 rb.AddForce(Vector2.up * doubleJumpForce);
                 hasDoubleJumped = true;
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
 
     void ObxodSounds()
     {
-        //PlaySound(sounds[2], destroyed: true, voulume: 0.3f);
-        //PlaySound(sounds[4], destroyed: true, voulume: 0.05f);
+        PlaySound(sounds[2], destroyed: true, voulume: voulume1);
+        PlaySound(sounds[4], destroyed: true, voulume: voulume1);
     }
 }
