@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
                 isGrounded = false;
                 hasDoubleJumped = false;
             }
-            else if (!hasDoubleJumped)
+            else if (!hasDoubleJumped && GameManager.DoubleJumpUnlocked)
             {
                 //PlaySound(sounds[1], destroyed: true, voulume: 0.3f);
                 rb.velocity = new Vector2(rb.velocity.x, 0f); 
@@ -111,5 +111,20 @@ public class PlayerController : MonoBehaviour
     {
         //PlaySound(sounds[2], destroyed: true, voulume: 0.3f);
         //PlaySound(sounds[4], destroyed: true, voulume: 0.05f);
+    }
+
+    public void SavePlayer()
+    {
+        SaveProgress.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        DataSchemas.Player data = SaveProgress.LoadPlayer();
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
     }
 }
