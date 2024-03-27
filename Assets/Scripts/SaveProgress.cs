@@ -6,81 +6,91 @@ using System.Runtime.Serialization;
 using System;
 using System.Collections.Generic;
 using UnityEditor;
-using Unity.VisualScripting;
 
-//this is SaveInfoNewer.cs
-//this script saves and loads all the info we want
 public static class SaveProgress
 {
-    //data is what is finally saved
-    public static Dictionary<string, int> data = new Dictionary<string, int>();
-    private static string path = "PlayerProgress.save";
-
-    public static void LoadData()
+    public static string PlayerSavePath = Application.persistentDataPath + "/Player.save";
+    public static string GameSavePath = Application.persistentDataPath + "/Game.save";
+    public static void SavePlayer(PlayerController player)
     {
-        //this loads the data
-        data = DeserializeData<Dictionary<string, int>>(path);
-    }
-
-    [MenuItem("Tools/SaveManager/Save data to file")]
-    public static void SaveData()
-    {
-        //this saves the data
-        SerializeData(data, path);
-    }
-
-    [MenuItem("Tools/SaveManager/Delete PlayerProgress.save")]
-    public static void DeleteSaveFile()
-    {
-        if (File.Exists(path))
-        {
-            File.Delete(path);
-        }
-    }
-    public static void SerializeData<T>(T data, string path)
-    {
-        //this is just magic to save data.
-        //if you're interested read up on serialization
-        FileStream fs = new FileStream(path, FileMode.OpenOrCreate);
         BinaryFormatter formatter = new BinaryFormatter();
-        try
-        {
-            formatter.Serialize(fs, data);
-            Debug.Log("Data written to " + path + " @ " + DateTime.Now.ToShortTimeString());
-        }
-        catch (SerializationException e)
-        {
-            Debug.LogError(e.Message);
-        }
-        finally
-        {
-            fs.Close();
-        }
+        FileStream stream = new FileStream(PlayerSavePath, FileMode.Create);
+        DataSchemas.Player data = new DataSchemas.Player(player);
+        formatter.Serialize(stream, data);
+        stream.Close();
     }
 
-    public static T DeserializeData<T>(string path)
+    public static DataSchemas.Player LoadPlayer()
     {
-        //this is the magic that deserializes the data so we can load it
-        T data = default(T);
-
-        if (File.Exists(path))
+        if (File.Exists(PlayerSavePath))
         {
-            FileStream fs = new FileStream(path, FileMode.Open);
-            try
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                data = (T)formatter.Deserialize(fs);
-                Debug.Log("Data read from " + path);
-            }
-            catch (SerializationException e)
-            {
-                Debug.LogError(e.Message);
-            }
-            finally
-            {
-                fs.Close();
-            }
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(PlayerSavePath, FileMode.Open);
+            DataSchemas.Player data = formatter.Deserialize(stream) as DataSchemas.Player;
+            stream.Close();
+            return data;
         }
-        return data;
+        else
+        {
+            Debug.LogError("Save file not found in " + PlayerSavePath);
+            return null;
+        }
+    }
+    public static bool PlayerSaveExists()
+    {
+        return File.Exists(PlayerSavePath);
+    }
+
+
+    public static void SaveGame()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(GameSavePath, FileMode.Create);
+        DataSchemas.Game data = new DataSchemas.Game();
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+    public static DataSchemas.Game LoadGame()
+    {
+        if (File.Exists(GameSavePath))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(GameSavePath, FileMode.Open);
+            DataSchemas.Game data = formatter.Deserialize(stream) as DataSchemas.Game;
+            stream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + GameSavePath);
+            return null;
+        }
+    }
+    public static bool GameSaveExists()
+    {
+        return File.Exists(GameSavePath);
+    }
+
+
+    [MenuItem("Tools/SaveProgress/Delete Player.save")]
+    public static void DeletePlayerSave()
+    {
+        if (File.Exists(PlayerSavePath))
+            File.Delete(PlayerSavePath);
+    }
+
+    [MenuItem("Tools/SaveProgress/Delete Game.save")]
+    public static void DeleteGameSave()
+    {
+        if (File.Exists(GameSavePath))
+            File.Delete(GameSavePath);
+    }
+
+    [MenuItem("Tools/SaveProgress/Delete all")]
+    public static void DeleteAddSaves()
+    {
+        DeletePlayerSave();
+        DeleteGameSave();
     }
 }
