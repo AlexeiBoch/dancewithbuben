@@ -9,33 +9,43 @@ public class AudioControllerSettings: MonoBehaviour
     [SerializeField] Sprite audioOff;
     //[SerializeField] GameObject buttonAudio;
 
-    [SerializeField] Slider slider;
+    [SerializeField] Slider[] sliders;
+    [SerializeField] AudioClip[] clips;
 
-    
-   // [SerializeField] AudioSource audioSource;
 
-   // [SerializeField] AudioClip clip;
+    // [SerializeField] AudioSource audioSource;
+
+    // [SerializeField] AudioClip clip;
+
+    private void Awake()
+    {
+        // Воспроизводим все звуки при старте игры
+        for (int i = 0; i < clips.Length; i++)
+        {
+            AudioSource.PlayClipAtPoint(clips[i], transform.position);
+        }
+    }
 
     private void Update()
     {
-       // audioSource.volume = slider.value;
+        // Устанавливаем громкость для каждого звука от соответствующего слайдера
+        for (int i = 0; i < sliders.Length; i++)
+        {
+            AudioListener.volume = sliders[i].value;
+        }
     }
 
-    public void OnOffAudio()
+    public void OnOffAudio(int index)
     {
         if (AudioListener.volume == 1)
         {
             AudioListener.volume = 0;
-           // buttonAudio.GetComponent<Image>().sprite = audioOff;
+            // Установите изображение кнопки audioOff для index-го звука
         }
         else
         {
             AudioListener.volume = 1;
-          //  buttonAudio.GetComponent<Image>().sprite = audioOn;
+            // Установите изображение кнопки audioOn для index-го звука
         }
-    }
-    public void PlaySound()
-    {
-        //audioSource.PlayOneShot(clip);
     }
 }
