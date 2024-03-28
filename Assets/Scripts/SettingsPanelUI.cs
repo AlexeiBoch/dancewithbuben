@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
-public class  SettingsGameManager : MonoBehaviour
+public class SettingsPanelUI : MonoBehaviour
 {
     [SerializeField] GameObject PanelMenuBack;
     [SerializeField] GameObject PanelSettingsBack;
     [SerializeField] GameObject PausePanelBack;
     [SerializeField] GameObject PanelScrollBack;
+    [SerializeField] GameObject PanelStartGame;
 
     public void OpenPanel()
     {
-        if (!(PausePanelBack.activeSelf)&& !(PanelScrollBack.activeSelf))
+        if (!(PausePanelBack.activeSelf) && !(PanelScrollBack.activeSelf) && !(PanelStartGame.activeSelf) && !(PanelSettingsBack.activeSelf))
         {
             PanelMenuBack.SetActive(!PanelMenuBack.activeSelf);
         }
@@ -36,16 +36,17 @@ public class  SettingsGameManager : MonoBehaviour
     {
         PanelMenuBack.SetActive(false);
         Time.timeScale = 1f;
-       
+
     }
 
     public void CloseSattings()
     {
         PanelMenuBack.SetActive(true);
-        PanelSettingsBack.SetActive (false);
+        PanelSettingsBack.SetActive(false);
     }
     public void ExitToStartGame()
     {
-        SceneManager.LoadScene(0);
+        PanelStartGame.SetActive(true);
     }
 }
+
