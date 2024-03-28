@@ -71,26 +71,4 @@ public static class SaveProgress
     {
         return File.Exists(GameSavePath);
     }
-
-
-    [MenuItem("Tools/SaveProgress/Delete Player.save")]
-    public static void DeletePlayerSave()
-    {
-        if (File.Exists(PlayerSavePath))
-            File.Delete(PlayerSavePath);
-    }
-
-    [MenuItem("Tools/SaveProgress/Delete Game.save")]
-    public static void DeleteGameSave()
-    {
-        if (File.Exists(GameSavePath))
-            File.Delete(GameSavePath);
-    }
-
-    [MenuItem("Tools/SaveProgress/Delete all")]
-    public static void DeleteAddSaves()
-    {
-        DeletePlayerSave();
-        DeleteGameSave();
-    }
 }
