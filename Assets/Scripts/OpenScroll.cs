@@ -38,7 +38,7 @@ public class OpenScroll : Sounds
             Scroll.SetActive(false);
             PanelScrollBack.SetActive(true);
             Time.timeScale = 0f;
-            PlaySound(sounds[0], destroyed: true, voulume: 0.7f);
+            PlaySound(sounds[0], destroyed: true, voulume: voulume1);
         }
     }
 

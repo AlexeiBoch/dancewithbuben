@@ -32,14 +32,14 @@ public class Portal : Sounds
             Vector3 direction = toPoartal.transform.TransformDirection(Vector3.right) - transform.TransformDirection(Vector3.left);
             other.transform.position = toPoartal.transform.position;
             rb.AddForce(direction * magnitude, ForceMode2D.Impulse);
-            PlaySound(sounds[0], destroyed: true, voulume: 0.4f);
+            PlaySound(sounds[0], destroyed: true, voulume: voulume1);
         }
 
 
         else
         {
             tpActive = true;
-            PlaySound(sounds[0], destroyed: true, voulume: 0.4f);
+            PlaySound(sounds[0], destroyed: true, voulume: voulume1);
         }
     }
 
