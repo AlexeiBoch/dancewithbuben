@@ -7,13 +7,8 @@ public class CheckPoint:MonoBehaviour
     PlayerController playerController;
     public GameObject touchEffect;
     GameObject bufferEffect;
-<<<<<<< HEAD
     
     private void Awake()
-=======
-
-    private void Start()
->>>>>>> 29ec93cde5a3c26353fbf07a72d703cbce6fd0c2
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }

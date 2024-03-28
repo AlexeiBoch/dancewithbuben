@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerControllerReduction : PlayerController
+public class PlayerControllerReduction:PlayerController
 {
 
     //из данного скрипта я впринцепе вырезал логику проверки на то что сверху над нами есть препядствие, а так оно должно работать по принцепу, что если над нами луч соприкасается с обьектом мы булевую переменную делаем false чем блочим функцию ScaleSwitch() чтоб грубо говря в кишке не было возможности вернуться к нормальному размеру 
