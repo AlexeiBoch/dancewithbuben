@@ -8,17 +8,37 @@ public class SettingsPanelUI : MonoBehaviour
     [SerializeField] GameObject PanelMenuBack;
     [SerializeField] GameObject PanelSettingsBack;
     [SerializeField] GameObject PausePanelBack;
-    [SerializeField] GameObject PanelScrollBack;
+    [SerializeField] GameObject[] PanelScrollBack;
+    [SerializeField] GameObject[] TextUnlockAbility;
     [SerializeField] GameObject PanelStartGame;
+
+    private void Start()
+    {
+        PanelStartGame.SetActive(true);
+        Time.timeScale = 0f;
+    }
 
     public void OpenPanel()
     {
-        if (!(PausePanelBack.activeSelf) && !(PanelScrollBack.activeSelf) && !(PanelStartGame.activeSelf) && !(PanelSettingsBack.activeSelf))
+        if (!(PausePanelBack.activeSelf) && !(PanelStartGame.activeSelf) && !(PanelSettingsBack.activeSelf))
         {
-            PanelMenuBack.SetActive(!PanelMenuBack.activeSelf);
+            if(!(PanelScrollBack[0].activeSelf) && !(PanelScrollBack[1].activeSelf) && !(PanelScrollBack[2].activeSelf))
+            {
+                if (!(TextUnlockAbility[0].activeSelf) && !(TextUnlockAbility[1].activeSelf))
+                {
+                    PanelMenuBack.SetActive(!PanelMenuBack.activeSelf);
+                }
+            }
+            
         }
         Time.timeScale = 0f;
 
+    }
+
+    public void StartGame()
+    {
+        PanelStartGame.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void OpenSettings()
@@ -46,6 +66,8 @@ public class SettingsPanelUI : MonoBehaviour
     }
     public void ExitToStartGame()
     {
+        Time.timeScale = 0f;
+        PanelMenuBack.SetActive(false);
         PanelStartGame.SetActive(true);
     }
 }

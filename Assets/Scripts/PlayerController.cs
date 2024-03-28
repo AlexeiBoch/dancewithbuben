@@ -15,13 +15,15 @@ public class PlayerController:Sounds
     [SerializeField] GameObject PausePanel;
 
     //ïåðåíîñ GameController
-    private void OnTriggerEnter2D(Collider2D otherCollider)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (otherCollider.CompareTag("Trap"))
+        if (collision.CompareTag("ÑoliderDie"))
         {
             Die();
         }
     }
+
     void Die()
     {
         PausePanel.SetActive(!PausePanel.activeSelf);
@@ -81,7 +83,9 @@ public class PlayerController:Sounds
     private void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.CompareTag("Trap"))
-        { }
+        {
+            Die();
+        }
         if (coll.gameObject.CompareTag("Grounds") || coll.gameObject.CompareTag("Box"))
         {
             isGrounded = true;
