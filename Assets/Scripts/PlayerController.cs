@@ -91,7 +91,7 @@ public class PlayerController:Sounds
             anim.SetBool("onGround", isGrounded);
 
             effectLandingInstance = Instantiate(effectLanding, transform.position - new Vector3(0, 0.9f, 0), Quaternion.identity);
-            PlaySound(sounds[3], voulume: voulume1, destroyed: true);
+            //PlaySound(sounds[3], voulume: voulume1, destroyed: true);
             Destroy(effectLandingInstance, 1f);
         }
     }
@@ -149,8 +149,8 @@ public class PlayerController:Sounds
 
     void ObxodSounds()
     {
-        PlaySound(sounds[2], destroyed: true, voulume: voulume1);
-        PlaySound(sounds[4], destroyed: true, voulume: voulume1);
+        PlaySound(sounds[2], destroyed: true, voulume: 0.5f);
+        PlaySound(sounds[4], destroyed: true, voulume: 0.1f);
     }
 
     public void SavePlayer()
