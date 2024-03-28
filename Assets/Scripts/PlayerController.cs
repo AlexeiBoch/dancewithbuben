@@ -4,19 +4,54 @@ using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerController : Sounds
+public class PlayerController:Sounds
 {
     public Rigidbody2D rb;
     [SerializeField] private Animator anim;
     public Transform characterTransform;
 
     public int money = 1;
+    static Vector2 checpointPos;
+    [SerializeField] GameObject PausePanel;
 
+    //перенос GameController
+    private void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        if (otherCollider.CompareTag("Trap"))
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        PausePanel.SetActive(!PausePanel.activeSelf);
+        Time.timeScale = 0f;
+
+    }
+    public void ClosePanelPause()
+    {
+        PausePanel.SetActive(false);
+        Respawn();
+        Time.timeScale = 1f;
+        
+    }
+
+    public  void UpdateCheckPoint(Vector2 pos)
+    {
+        checpointPos = pos;
+    }
+    public void Respawn()
+    {
+        transform.position = checpointPos;
+    }
+    //перенос GameController
 
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        checpointPos = transform.position;
+        
     }
 
     protected virtual void Update()
@@ -87,7 +122,7 @@ public class PlayerController : Sounds
                 isGrounded = false;
                 hasDoubleJumped = false;
             }
-            else if (!hasDoubleJumped)
+            else if (!hasDoubleJumped && GameManager.DoubleJumpUnlocked)
             {
                 PlaySound(sounds[1], destroyed: true, voulume : voulume1);
                 rb.velocity = new Vector2(rb.velocity.x, 0f); 
@@ -113,5 +148,20 @@ public class PlayerController : Sounds
     {
         PlaySound(sounds[2], destroyed: true, voulume: voulume1);
         PlaySound(sounds[4], destroyed: true, voulume: voulume1);
+    }
+
+    public void SavePlayer()
+    {
+        SaveProgress.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        DataSchemas.Player data = SaveProgress.LoadPlayer();
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
     }
 }
