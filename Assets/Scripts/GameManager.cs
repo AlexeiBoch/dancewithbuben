@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> playerList = new List<GameObject>();
     [SerializeField] List<string> ignoreDeleteTags;
+    [SerializeField] GameObject mainCamera;
 
     public static bool DoubleJumpUnlocked;
     public static bool PlayerReductionUnlocked;
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
                 player.transform.position = previousPlayer.transform.position;
                 player.transform.rotation = previousPlayer.transform.localRotation;
                 SetActiveExtended(player, true);
+                mainCamera.GetComponent<CinemachineVirtualCamera>().Follow = player.transform;
             }
             else SetActiveExtended(player, false);
         }
