@@ -12,6 +12,7 @@ TagManager:
   - Zone2
   - Enemy
   - Light
+  - "\u0421oliderDie"
   layers:
   - Default
   - TransparentFX

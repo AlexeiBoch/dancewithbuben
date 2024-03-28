@@ -5702,7 +5702,7 @@ GameObject:
   - component: {fileID: 292254469}
   m_Layer: 0
   m_Name: "\u0421oliderDie (3)"
-  m_TagString: Trap
+  m_TagString: "\u0421oliderDie"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5751,7 +5751,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -66.771, y: 0}
@@ -7570,7 +7570,7 @@ GameObject:
   - component: {fileID: 414675206}
   m_Layer: 0
   m_Name: "\u0421oliderDie (1)"
-  m_TagString: Trap
+  m_TagString: "\u0421oliderDie"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7619,7 +7619,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 28.882713, y: 0}
@@ -7647,7 +7647,7 @@ GameObject:
   - component: {fileID: 421783273}
   m_Layer: 0
   m_Name: "\u0421oliderDie (2)"
-  m_TagString: Trap
+  m_TagString: "\u0421oliderDie"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7696,7 +7696,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -59.958374, y: 0}
@@ -14784,7 +14784,7 @@ GameObject:
   - component: {fileID: 781948823}
   m_Layer: 0
   m_Name: "\u0421oliderDie"
-  m_TagString: Trap
+  m_TagString: "\u0421oliderDie"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14818,7 +14818,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 26.192505, y: 0}
@@ -18190,7 +18190,7 @@ GameObject:
   - component: {fileID: 968556460}
   m_Layer: 0
   m_Name: "\u0421oliderDie (4)"
-  m_TagString: Trap
+  m_TagString: "\u0421oliderDie"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18239,7 +18239,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -49.68087, y: 0}
@@ -76615,7 +76615,7 @@ GameObject:
   - component: {fileID: 2046573605}
   m_Layer: 0
   m_Name: "\u0421oliderDie (5)"
-  m_TagString: Trap
+  m_TagString: "\u0421oliderDie"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76664,7 +76664,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -60.92144, y: 0}
