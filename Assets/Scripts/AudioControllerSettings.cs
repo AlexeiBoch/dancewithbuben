@@ -12,13 +12,13 @@ public class AudioControllerSettings: MonoBehaviour
     [SerializeField] Slider slider;
 
 
-     [SerializeField] AudioSource audioSource;
+    // [SerializeField] AudioSource audioSource;
 
      [SerializeField] AudioClip clip;
 
     private void Update()
     {
-         audioSource.volume = slider.value; 
+        // audioSource.volume = slider.value; 
     }
 
     public void OnOffAudio()

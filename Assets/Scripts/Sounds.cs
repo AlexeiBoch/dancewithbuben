@@ -9,7 +9,7 @@ public class Sounds: MonoBehaviour
     public AudioClip[] sounds;
 
     public Slider sliderVolumeMusic;
-    public AudioSource volumeMusic;
+    public AudioSource[] volumeMusic;
     public float voulume1;
 
     public AudioSource audioScr => GetComponent<AudioSource>();

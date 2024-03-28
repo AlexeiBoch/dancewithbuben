@@ -14,6 +14,7 @@ public class UnlockCollider : MonoBehaviour
         {
             TextUnLockAbility.SetActive(true);
             GameManager.UnlockAbility(option);
+            Time.timeScale = 0f;
             
         }
     }
@@ -21,5 +22,6 @@ public class UnlockCollider : MonoBehaviour
     {
         TextUnLockAbility.SetActive(false);
         Destroy(gameObject);
+        Time.timeScale = 1f;
     }
 }
