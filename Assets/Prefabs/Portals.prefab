@@ -137,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 8300000, guid: b9ccfa19b80e9774bab5ce967f6dbb72, type: 3}
+  sliderVolumeMusic: {fileID: 0}
+  volumeMusic: {fileID: 0}
+  voulume1: 0
   toPoartal: {fileID: 1591403957946095925}
   effectPortal: {fileID: 4679259770209523655, guid: 2b58f95f882160f45b7841f1b74288fd, type: 3}
 --- !u!1 &719524263211190342
@@ -382,6 +385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 8300000, guid: b9ccfa19b80e9774bab5ce967f6dbb72, type: 3}
+  sliderVolumeMusic: {fileID: 0}
+  volumeMusic: {fileID: 0}
+  voulume1: 0
   toPoartal: {fileID: 2981551725501547177}
   effectPortal: {fileID: 4679259770209523655, guid: 2b58f95f882160f45b7841f1b74288fd, type: 3}
 --- !u!1 &4891797449902504940
@@ -580,7 +586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8184148470548182060}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.045204822, w: 0.9989777}
   m_LocalPosition: {x: 174.73999, y: 28.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -625,8 +631,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 3
-  m_PointLightOuterRadius: 3
+  m_PointLightInnerRadius: 0.76481736
+  m_PointLightOuterRadius: 0.8096298
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -662,7 +668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8611796104066635780}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.03733468, w: 0.99930286}
   m_LocalPosition: {x: -174.69, y: -29.145279, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -707,8 +713,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 3
-  m_PointLightOuterRadius: 3
+  m_PointLightInnerRadius: 0.77123994
+  m_PointLightOuterRadius: 0.78137636
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

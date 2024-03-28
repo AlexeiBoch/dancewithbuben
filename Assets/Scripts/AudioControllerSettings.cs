@@ -18,7 +18,7 @@ public class AudioControllerSettings: MonoBehaviour
 
     private void Update()
     {
-         audioSource.volume = slider.value;
+         audioSource.volume = slider.value; 
     }
 
     public void OnOffAudio()
